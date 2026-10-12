@@ -14,6 +14,6 @@ pkgbase = omarket
 	conflicts = omaplug
 	replaces = omaplug
 	source = omarket-0.3.3.tar.gz::https://github.com/stewartjarod/omarket/archive/refs/tags/v0.3.3.tar.gz
-	sha256sums = b59e80f3d9b88cb5ed9c3b2130e04fcdc71efa8347189727394f213f60308480
+	sha256sums = 586103b94349fe1c78fce5adb2d2799135ba2f25459dfff9736a1aac43a3cae4
 
 pkgname = omarket
