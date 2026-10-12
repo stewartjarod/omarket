@@ -807,7 +807,8 @@ cmd_audit() {
       elif $rel == "same" then "verified"
       elif $rel == "ahead" then "ahead"
       elif $rel == "behind" then "behind"
-      elif (.remotes | map(ascii_downcase | sub("\\.git$"; "")) | index(.repo | ascii_downcase) | not) then "repo-mismatch"
+      elif (.repo | ascii_downcase | sub("/+$"; "") | sub("\\.git$"; "")) as $repo
+           | (.remotes | map(ascii_downcase | sub("/+$"; "") | sub("\\.git$"; "")) | index($repo) | not) then "repo-mismatch"
       else "drifted" end
     ' <<<"$row")
 
